@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Links = () => {
+    const links =
     [
         {
             title : "Homepage",
@@ -23,7 +24,7 @@ const Links = () => {
 
   return (
     <div>
-        {Links.map((link=>(
+        {links.map((link=>(
             <Link href={link.path} key={link.title}>{link.title}</Link>
         )))}
     </div>
