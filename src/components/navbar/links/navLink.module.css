@@ -1,7 +1,7 @@
 .container{
     min-width: 100px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 50px;
     font-weight: 500;
     text-align: center;
 }
@@ -9,4 +9,21 @@
 .active{
     background-color: var(--text);
     color: var(--bg);
+}
+
+.mobileLinks{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100px;
+    height: 0;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+
 }
