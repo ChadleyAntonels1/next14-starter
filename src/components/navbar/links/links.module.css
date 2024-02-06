@@ -11,3 +11,38 @@
     font-weight: bold;
     
 }
+
+/* responsive design  */
+.menuButton
+,.mobileLinks{
+    display: none;
+}
+
+/* responsive design  */
+@media(max-width: 768px){
+    .links{
+        display: none;
+    }
+    .menuButton{
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: bold;
+    }
+/* responsive design  */
+    .mobileLinks{
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: calc(100vh - 100px);
+        /* background-color: var(--bg); */
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+

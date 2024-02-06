@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react'
-import Link from 'next/link'
 import styles from './links.module.css'
 
 import NavLink from './navLink'
@@ -26,7 +25,7 @@ import NavLink from './navLink'
     ];
 
     const Links = () => {
-    const [open,setopen] = useState(false)
+    const [open,setOpen] = useState(false)
 
     
 
@@ -56,17 +55,17 @@ import NavLink from './navLink'
             }
             
         </div>
-        <button onClick={() => setopen((prev)=> !prev )}>Menu</button>
-        {
-            open && <div className={styles.mobileLinks}>
+        <button className={styles.menuButton} onClick={() => setOpen((prev) => !prev )}>Menu</button>
+        {open && (
+            <div className={styles.mobileLinks}>
                 {links.map((link) =>(
                  <NavLink item={link} key={link.title}/>
                  ))}
             </div>
-        }
+        )}
     </div>
   )
 }
 
 
-export default Links
+export default Links;
