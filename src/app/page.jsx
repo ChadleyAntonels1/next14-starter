@@ -1,5 +1,8 @@
 import styles from './home.module.css'
 import Image from 'next/image';
+
+
+
 const Home = () => {
   return <div className={styles.container}>
           <div className={styles.textContainer}>
@@ -8,6 +11,7 @@ const Home = () => {
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
                ed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            
             <div className={styles.buttons}>
               <button className={styles.button}>Learn more</button>
               <button className={styles.button}>Contact</button>
@@ -17,9 +21,7 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.imgContainer}>
-              <Image src="/hero.gif" alt='' fill className={styles.heroImg}/>
           </div>
-
         </div>;
 };
 

@@ -1,50 +1,242 @@
 .container{
     display: flex;
     gap: 100px;
-
+    flex: 1;
 }
-
+.container1{
+    display: flex;
+    background-color: black;
+    justify-content: space-evenly;
+}
+.container2{
+    text-align: center;    
+    background-color: blue;
+}
+.imgContainer{
+    flex: 1;
+    position:relative;
+    height: calc(100vh - 300px);
+    margin-top: 50px;
+}
 .textContainer{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 50px; 
+}
+.textContainer1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
 }
 
 .subtitle{
     color: var(--btn);
+
+}
+
+.subtitle1{
+    color: white;
+    margin-top: 40px;
+}
+.subtitle2{
+    color: white;
 }
 
 .title{
-    font-size: 54px;
+    font-size: 54px;    
+    margin-bottom: -30px;
 }
 
-.desc{
+.desc1 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 200;
+    line-height: 34px;
 }
-
-.boxes{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.box{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.box h1{
-    color: var(--btn);
-}
-.imgContainer{
-    flex: 1;
-    position: relative;
-
+.desc2 {   
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 34px;
 }
 
 .img{
     object-fit: contain;
 }
+
+  /*  responive height */
+  @media (max-width: 1536px){
+    .imgContainer{
+        margin-top: 40px;
+    }
+    .title{
+        font-size: 33px;       
+    }
+    .subtitle1{
+        font-size: 20px;
+    }
+    .subtitle2{
+        font-size: 20px;      
+    }
+    .desc1{
+        font-size: 18px;
+        margin-top: -10px;
+        line-height: 32px;
+    }
+    .desc2{
+        font-size: 18px;
+        margin-top: -10px;
+        line-height: 32px;
+
+    }
+}
+
+@media (max-width: 1366px){
+    .imgContainer{
+        margin-top: 45px;
+    }
+    .title{
+        font-size: 33px;
+    }
+    .subtitle1{
+        font-size: 20px;
+    }
+    .subtitle2{
+        font-size: 20px;
+    }
+    .desc1{
+        font-size: 18px;
+        margin-top: -10px;
+        line-height: 30px;
+    }
+    .desc2{
+        font-size: 18px;
+        margin-top: -10px;
+        line-height: 30px;
+    }
+}
+    
+
+@media (max-width: 1280px){
+    .imgContainer{
+        margin-top: 30px;
+    }
+     .title{
+        font-size: 31px;
+    }
+    .subtitle1{
+        font-size: 18px;
+    }
+    .subtitle2{
+        font-size: 18px;
+    }
+    .desc1{
+        font-size: 16px;
+        margin-top: -10px;
+        line-height: 26px;
+    }
+    .desc2{
+        font-size: 16px;
+        margin-top: -10px;
+        line-height: 26px;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .imgContainer{
+        margin-top: -60px;
+    }
+    .title{
+        font-size: 29px;
+    }
+    .subtitle1{
+        font-size: 16px;
+    }
+    .subtitle2{
+        font-size: 16px;  
+    }
+    .desc1{
+        font-size: 14px;
+        margin-top: -20px;
+        line-height: 20px;
+    }
+    .desc2{
+        font-size: 14px;
+        margin-top: -20px;
+        line-height: 20px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .imgContainer{
+        margin-top: -100px;
+    }
+    .title{
+        font-size: 29px;
+    }
+    .subtitle1{
+        font-size: 16px;
+    }
+    .subtitle2{
+        font-size: 16px;   
+    }
+    .desc1{
+        font-size: 12px;
+        margin-top: -30px;
+        line-height: 16px;
+    }
+    .desc2{
+        font-size: 12px;
+        margin-top: -30px;
+        line-height: 16px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .container {
+        text-align: left;
+        gap: 30px;
+      }
+      .container1 {
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+      .imgContainer{
+        margin-top: -140px;
+
+    }
+    
+    
+    .title{
+        font-size: 27px;
+    }
+    .subtitle1{
+        font-size: 14px;
+        margin-top: 35px;
+
+    }
+    .subtitle2{
+        font-size: 14px;
+        
+    }
+    .desc1{
+        font-size: 9px;
+        margin-top: -40px;
+        line-height: 14px;
+    }
+    .desc2{
+        font-size: 9px;
+        margin-top: -40px;
+        line-height: 14px;
+
+    }
+    .subdesc{
+        font-size: 10px;
+        font-weight: 500;
+
+    }
+  }
+  

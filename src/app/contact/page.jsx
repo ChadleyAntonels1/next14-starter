@@ -1,6 +1,13 @@
+"use client"
 import React from 'react'
 import styles from './contact.module.css'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+// import HydrationTest from '@/components/hydrationTest'
+
+// const HydrationTestNoSSR = dynamic(()=> import('@/components/hydrationTest'), {ssr: false})
+
+
 
 const ContactPage = () => {
   return (
@@ -8,6 +15,7 @@ const ContactPage = () => {
       <div className={styles.imgContainer}> 
       <Image src='/contact.png' alt='' fill className={styles.img} /></div>
       <div className={styles.formContainer}> 
+      {/* <HydrationTestNoSSR/> */}
         <form action='' className={styles.form}>
           <input type='text' placeholder='Name and Surname'/>
           <input type='text' placeholder='Email Address'/>
@@ -19,7 +27,7 @@ const ContactPage = () => {
             rows="10"
             placeholder="Message"
           ></textarea>
-          <button>Send</button>
+          <button>Send Message</button> 
         </form>
       </div>
 

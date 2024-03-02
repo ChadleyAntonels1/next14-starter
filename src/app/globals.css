@@ -1,9 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root{
     --bg: #0d0c22;
     --bgSoft: #2d2b42;
     --text: white;
     --textSoft: #e5e5e5;
     --btn: #3673fd;
+    font-family: sinete, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 *{
@@ -32,12 +40,29 @@ a{
     justify-content: space-between;
 }
 
+/* tags */
+h1{
+    
+}
+p{
+    margin-top:  20px;
+
+}
+li{
+    margin-top:  20px;
+
+}
+
 /* responsive design  */
+/* Extra large screens, TV */
 @media (max-width: 1536px){
     .container{
-        width: 1366px;
+        width: 1367px;
+        padding-right: 20px;
+
     }
 }
+/* Extra large screens, TV */
 @media (max-width: 1366px){
     .container{
         width: 1280px;
@@ -45,22 +70,34 @@ a{
         padding-right: 20px;
     }
 }
+/* Desktops, large screens */
 @media (max-width: 1280px){
     .container{
         width: 1024px;
     }
 }
+/* Small screens, laptops */
 @media (max-width: 1024px){
     .container{
         width: 768px;
     }
 }
+/* iPads, Tablets */
 @media (max-width: 768px){
     .container{
         width: 640px;
     }
-}@media (max-width: 640px){
+}
+/* iPads, Tablets */
+@media (max-width: 640px){
     .container{
         width: 475px;
+    }
+}
+
+/* mobile devices */
+@media (max-width: 475px){
+    .container{
+        width: 320px;
     }
 }
