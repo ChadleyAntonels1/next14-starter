@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './about2.module.css'
+import Link from 'next/link'
 
 export const metadata = {
     title:" About Page" ,
@@ -10,129 +11,30 @@ export const metadata = {
 
 const AboutPage = () => {
   return (
-    
-    <div>
-            <div className='grid gap-8 md:grid-col'>
-                <div className=''>
-
-                      <h1 className='text-3xl '>Chadley Antonels</h1>
-                      <h2 className='text-xl'>Frontend Web Developer</h2>
-                </div>
-            </div>
-            <div className="grid gap-8 md:grid-col-2">
-                <div className="flex flex-col md:flex-col " >
-                  <img src="/IMG_6020.jpg" 
-                        alt="Profile" 
-                        className="w-full md:w-1/3 rounded-lg shadow-lg mb-4 md:mb-0" />
-                </div>
-                    <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-                    <p className="md:ml-10 md:w-2/3">
-                      As an entry-level frontend web developer, I'm a driven creator with a passion for turning code into visually appealing interfaces. 
-                      I adapt easily to changes, using effective communication and creative problem-solving to navigate the intricacies of pixels and code. Punctuality, composure, and patience are crucial in crafting user-friendly designs. 
-                      Whether leading a project or collaborating in a team, I bring an approachable persona, taking pride in every detail for a user's smooth digital journey. Guided by values like loyalty and honesty, I see myself not just as a developer but a storyteller, creating digital experiences that resonate. 
-                      In frontend development, success is a journey where hard work and perseverance set the course.
-                    </p>
-                </div>
-            
-      
-      {/* <div class='' className={styles.container}>
-          <div className={styles.textContainer}>
-                <h1 class='' className={styles.title}>Chadley Antonels</h1>
-                <h2 className={styles.subtitle}>Frontend Web Developer</h2>
-          </div>
+    <div className='grid justify-items-center text-center px-20 sm:px-20 md:px-28 lg:px-48 xl:px-[400px] my-10'>
+    <div className='mb-10'>
+      <div className='grid justify-center'>
+        <Image src="/pexels-pixabay-414974.jpg" alt='' width={500} height={500} className='mb-10'/>
       </div>
-
-      <div className={styles.container}>
-          <div className={styles.imgContainer}>
-            <Image
-              src="/IMG_6020.jpg"
-              alt="About Image"
-              fill
-              className={styles.img}/>
-          </div>
-          
-          <div className={styles.textContainer}>
-            <h2 className={styles.subtitle1}>Background</h2>
-              <p className={styles.desc1}>
-                As an entry-level frontend web developer, I'm a driven creator with a passion for turning code into visually appealing interfaces. 
-                I adapt easily to changes, using effective communication and creative problem-solving to navigate the intricacies of pixels and code. Punctuality, composure, and patience are crucial in crafting user-friendly designs. 
-                Whether leading a project or collaborating in a team, I bring an approachable persona, taking pride in every detail for a user's smooth digital journey. Guided by values like loyalty and honesty, I see myself not just as a developer but a storyteller, creating digital experiences that resonate. 
-                In frontend development, success is a journey where hard work and perseverance set the course.
-              </p>          
-          </div>        
+      <div className=' grid col-span-4 justify-items-center '>
+        <h1 className='text-xl py-3'>Elevate Your Brand with Stunning Graphics</h1>
+        <p className='text-sm'>
+        Unlock the power of visual storytelling. Welcome to our graphic design hub, where creativity thrives. Let's craft unforgettable designs together.            
+        </p>  
       </div>
-
-      <div className={styles.container2}>
-          <h2 className={styles.subtitle2}>Education</h2>
-      </div>
-
-      <div className={styles.container1}>
-        <div className={styles.textContainer1}>
-          <h3 className={styles.subdesc}>National Senior Certificate</h3> 
-        </div>
-        <div className={styles.textContainer1}>
-          <h3 className={styles.subdesc}>Higher Certificate: Information and Communication Technology</h3>  
-        </div>
-          <div className={styles.textContainer1}>
-          <h3 className={styles.subdesc}>Diploma : Information and Communication Technology- Multimedia Applications</h3>  
-        </div>
-      </div>
-
-      <div className={styles.container1}>
-        <div className={styles.textContainer1}>
-          <p className={styles.desc2}>South Peninsula High School</p> 
-        </div>
-        <div className={styles.textContainer1}>
-        <p className={styles.desc2}>Cape Peninsula University of Technology</p> 
-        </div>
-          <div className={styles.textContainer1}>
-          <p className={styles.desc2}>Cape Peninsula University of Technology</p>  
-        </div>
-      </div>
-
-      <div className={styles.container1}>
-        <div className={styles.textContainer1}>
-          <p className={styles.desc2}>2012-2017</p>         
-        </div>
-        <div className={styles.textContainer1}>
-        <p className={styles.desc2}>2018-2018</p>  
-        </div>
-          <div className={styles.textContainer1}>
-          <p className={styles.desc2}>2019-2023</p>  
-        </div>
-      </div>
-
-      <div className={styles.container1}>
-          <div className={styles.textContainer1}>
-              <li className={styles.desc2}>Bachalors pass</li>               
-          </div>             
-          <div className={styles.textContainer1}>
-              <li className={styles.desc2}>Graduated with four distinctions</li> 
-          </div>      
-          <div className={styles.textContainer1}>              
-              <li className={styles.desc2}>frontend web development</li>  
-          </div>
-      </div>
-
-                
-
-      <div className={styles.container}>   
-          <div className={styles.textContainer1}>
-            <h2 className={styles.subtitle2}>Background</h2>
-              <p className={styles.desc1}>
-                As an entry-level frontend web developer, I'm a driven creator with a passion for turning code into visually appealing interfaces. 
-                I adapt easily to changes, using effective communication and creative problem-solving to navigate the intricacies of pixels and code. Punctuality, composure, and patience are crucial in crafting user-friendly designs. 
-                Whether leading a project or collaborating in a team, I bring an approachable persona, taking pride in every detail for a user's smooth digital journey. Guided by values like loyalty and honesty, I see myself not just as a developer but a storyteller, creating digital experiences that resonate. 
-                In frontend development, success is a journey where hard work and perseverance set the course.
-              </p>          
-          </div>       
-               
-      </div> */}
-
-
-      
-
     </div>
+    <div className='bg-white bg-opacity-10 rounded-md h-auto p-4 grid justify-items-center'>
+        <h1 className='text-xl'>Let's Create Something Amazing Together!</h1>
+        <p className='text-sm p-3 mb-2'>
+        Let's collaborate to bring your ideas to life! Contact us today and let the creativity flow.              </p>  
+      
+    <div className='py-3'>
+      <Link className="bg-black text-white font-regular items-center text-xs min-w-[100px] min-h-[25px] rounded-lg p-3" 
+      href="/contact">Learn more</Link>
+    </div>
+    </div>
+  </div>
+    
   )
 }
 

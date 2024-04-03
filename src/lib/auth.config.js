@@ -1,4 +1,10 @@
+import { error } from "console";
+
 export const authConfig = {
+  experimental:{
+    serverActions: true
+  },
+  
   pages: {
     signIn: "/login",
   },
@@ -24,10 +30,15 @@ export const authConfig = {
       const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
       const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
       const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
+      const isOnServerActionPage = request.nextUrl?.pathname.startsWith("/serveractiontest");
+
 
       // ONLY ADMIN CAN REACH THE ADMIN DASHBOARD
 
       if (isOnAdminPanel && !user?.isAdmin) {
+        return false;
+      }
+      if (isOnServerActionPage && !user?.isAdmin) {
         return false;
       }
 

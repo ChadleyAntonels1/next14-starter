@@ -2,6 +2,7 @@ import { getPosts } from "@/lib/data";
 import styles from "./adminPosts.module.css";
 import Image from "next/image";
 import { deletePost } from "@/lib/action";
+import Link from "next/link";
 
 const AdminPosts = async () => {
   const posts = await getPosts();
@@ -10,7 +11,7 @@ const AdminPosts = async () => {
     <div className={styles.container}>
       <h1>Posts</h1>
       {posts.map((post) => (
-        <div className={styles.post} key={post.id}>
+        <div className={styles.post} key={post.slug}>
           <div className={styles.detail}>
             <Image
               src={post.img || "/noAvatar.png"}
@@ -18,7 +19,9 @@ const AdminPosts = async () => {
               width={50}
               height={50}
             />
-            <span className={styles.postTitle}>{post.title}</span>
+            <Link className={styles.link} href={`/blog/${post.slug}`}>
+              <span className={styles.postTitle}>{post.title}</span>
+            </Link>
           </div>
           <form action={deletePost}>
             <input type="hidden" name="id" value={post.id} />

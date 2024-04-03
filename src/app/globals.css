@@ -85,12 +85,6 @@ li{
 /* iPads, Tablets */
 @media (max-width: 768px){
     .container{
-        width: 640px;
-    }
-}
-/* iPads, Tablets */
-@media (max-width: 640px){
-    .container{
         width: 475px;
     }
 }

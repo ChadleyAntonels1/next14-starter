@@ -11,7 +11,7 @@ const Navbar = async () => {
 
   return (
     <div className={styles.container}>
-        <Link href='/' className={styles.logo}>Chadley Antonels</Link>
+        <Link href='/' className={styles.logo}>Vision Graphics</Link>
         <div>
             <Links session={session}/>
         </div>

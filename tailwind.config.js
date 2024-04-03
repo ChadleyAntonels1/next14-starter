@@ -15,9 +15,7 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
-    colors: {
-      "brand-green": "#4DF69B"
-    },
+    
     fontFamily: {
     },
     extend: {},

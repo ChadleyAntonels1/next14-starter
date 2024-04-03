@@ -6,20 +6,41 @@ import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
 
+// export const upload = async (formData) => {
+//   const {file} = Object.fromEntries(formData);
+//   try {
+//     connectToDb();
+//     const newFile = new Post({
+//       file
+//     });
+
+
+//     await newFile.save();
+//     console.log("saved to db");
+//     revalidatePath("/blog");
+//     revalidatePath("/admin");
+//   } catch (err) {
+//     console.log(err);
+//     return { error: "Image upload unsuccessful!" };
+//   }
+
+// }
+
 export const addPost = async (prevState,formData) => {
   // const title = formData.get("title");
   // const desc = formData.get("desc");
   // const slug = formData.get("slug");
 
-  const { title, desc, slug, userId } = Object.fromEntries(prevState, formData);
+  const { title, desc, userId, slug, file } = Object.fromEntries(formData);
 
   try {
     connectToDb();
     const newPost = new Post({
       title,
-      desc,
-      slug,
+      desc, 
       userId,
+      slug,
+      file
     });
 
     await newPost.save();
