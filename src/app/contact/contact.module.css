@@ -1,6 +1,7 @@
 .container {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 100px;
   }
   
@@ -44,8 +45,3 @@
     cursor: pointer;
   }
   
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  }

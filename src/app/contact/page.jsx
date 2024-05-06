@@ -12,9 +12,7 @@ import dynamic from 'next/dynamic'
 const ContactPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}> 
-      <Image src='/contact.png' alt='' fill className={styles.img} /></div>
-      <div className={styles.formContainer}> 
+      
       {/* <HydrationTestNoSSR/> */}
         <form action='' className={styles.form}>
           <input type='text' placeholder='Name and Surname'/>
@@ -29,7 +27,6 @@ const ContactPage = () => {
           ></textarea>
           <button>Send Message</button> 
         </form>
-      </div>
 
 
     </div>

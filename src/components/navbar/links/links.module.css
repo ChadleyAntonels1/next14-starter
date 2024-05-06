@@ -32,11 +32,10 @@
 /* responsive design  */
     .mobileLinks{
         position: absolute;
-        top: 100px;
         right: 0;
-        width: 50%;
-        height: calc(100vh - 100px);
-        background-color: var(--bg);
+        width: 100%;
+        height: 100%;
+        background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;

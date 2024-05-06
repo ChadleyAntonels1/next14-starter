@@ -39,17 +39,7 @@ const postSchema =  new mongoose.Schema({
     desc:{
         type: String,
         required: true
-    },
-    
-    img:{
-        type:String,
-    },
-
-    file:{
-        data: Buffer,
-        type: String
-    },
-    
+    }, 
     userId:{
         type: String,
     },
