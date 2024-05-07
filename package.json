@@ -11,6 +11,8 @@
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.54",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "mongoose": "^8.1.1",

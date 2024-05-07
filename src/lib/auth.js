@@ -32,7 +32,7 @@ export const {
   auth,
   signIn,
   signOut,
-} = NextAuth({
+  } = NextAuth({
   ...authConfig,
   providers: [
     GitHub({
@@ -51,7 +51,7 @@ export const {
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ User, account, profile }) {
       if (account.provider === "github") {
         connectToDb();
         try {

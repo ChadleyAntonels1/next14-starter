@@ -8,6 +8,9 @@
 
 # testing
 /coverage
+/navigationtest
+/serveractiontest
+
 
 # next.js
 /.next/
