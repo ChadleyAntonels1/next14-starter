@@ -2,7 +2,11 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 // import ClientSideProviderTest from '@/components/clientSideProviderTest'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +26,8 @@ export default function RootLayout({ children }) {
         <div className='container'>
         <Navbar/>
         {children}
+        <Analytics/>
+        <SpeedInsights/>
         <Footer/>
         </div>
         {/* </ClientSideProviderTest> */}
