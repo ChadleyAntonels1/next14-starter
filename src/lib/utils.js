@@ -34,7 +34,6 @@
        return{MongoClient}
      }
      mongoClient= await(new MongoClient(uri,mongo,options)).mongoose.connect()
-     connection.isConnected = db.connections[0].readyState;
      console.log("Mongo Connected!")
      return{MongoClient}
    } catch (error) {
