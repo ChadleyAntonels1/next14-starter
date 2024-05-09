@@ -6,7 +6,7 @@ import styles from './blog.module.css'
 
 // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("https://data.mongodb-api.com/app/data-bdkssdn/endpoint/data/v1/api/blog");
+  const res = await fetch("https://data.mongodb-api.com/app/data-bdkssdn/endpoint/data/v1/api/blog", {next:{revalidate:3600}});
 
   if (!res.ok) {
     throw new Error("Something went wrong")
