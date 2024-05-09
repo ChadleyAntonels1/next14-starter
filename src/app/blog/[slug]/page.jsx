@@ -6,7 +6,7 @@ import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
-  const res = await fetch(`http://next14-starter-git-main-chadleyantonels1s-projects.vercel.app/api/blog/${slug}`);
+  const res = await fetch(`/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
