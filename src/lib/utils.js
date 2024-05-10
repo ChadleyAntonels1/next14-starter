@@ -7,7 +7,7 @@
         console.log("\x1b[42m","mongo is connected");
         return;
       }
-      const db = await mongoose.connect(process.env.MONGO,process.env.MONGODB_URI);
+      const db = await mongoose.connect(process.env.MONGO);
       connection.isConnected = db.connections[0].readyState;
     } catch (error) {
       console.log("\x1b[41m", '%c mongo not connected');
