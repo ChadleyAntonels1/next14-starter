@@ -6,7 +6,7 @@ import styles from './blog.module.css'
 
 // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("https://next14-starter-mg60qk3pr-chadleyantonels1s-projects.vercel.app/api/blog", {next:{revalidate:3600}});
+  const res = await fetch("https://next14-starter-git-main-chadleyantonels1s-projects.vercel.app/api/blog", {next:{revalidate:3600}});
 
   if (!res.ok) {
     throw new Error("Something went wrong")
