@@ -7,7 +7,6 @@ const Home = () => {
   return <div className='grid justify-items-center text-center px-20 sm:px-20 md:px-28 lg:px-48 xl:px-[400px] my-10'>
           <div className='mb-10'>
             <div className='grid justify-center'>
-              <Image src="/pexels-pixabay-414974.jpg" alt='' width={500} height={500} className='mb-10'/>
             </div>
             <div className=' grid col-span-4 justify-items-center '>
               <h1 className='text-xl py-3'>Elevate Your Brand with Stunning Graphics</h1>
