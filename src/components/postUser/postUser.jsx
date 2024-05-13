@@ -24,7 +24,7 @@ const PostUser = async ({ userId }) => {
     <div className={styles.container}>
       <Image
         className={styles.avatar}
-        src={ "/noavatar.png"}
+        src= "/noavatar.png"
         alt=""
         width={50}
         height={50}
