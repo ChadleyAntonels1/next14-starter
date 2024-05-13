@@ -5,20 +5,20 @@ import styles from './blog.module.css'
 
 
 // FETCH DATA WITH AN API
-const getData = async () => {
-  const res = await fetch("https://next14-starter-git-main-chadleyantonels1s-projects.vercel.app/api/blog", {next:{revalidate:3600}});
+// const getData = async () => {
+//   const res = await fetch("http://localhost:3000/api/blog", {next:{revalidate:3600}});
 
-  if (!res.ok) {
-    throw new Error("Something went wrong")
-  }
+//   if (!res.ok) {
+//     throw new Error("Something went wrong")
+//   }
 
-  return res.json();
-};
+//   return res.json();
+// };
 
-const BlogPage = async () => {
+// const BlogPage = async () => {
 
-  // FETCH DATA WITH AN API
-  const posts = await getData();
+//   // FETCH DATA WITH AN API
+//   const posts = await getData();
 
   // FETCH DATA WITHOUT AN API
   // const posts = await getPosts();
@@ -32,6 +32,6 @@ const BlogPage = async () => {
       ))}
     </div>
   );
-};
+// };
 
 export default BlogPage
