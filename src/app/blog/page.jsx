@@ -1,12 +1,13 @@
 import React from 'react'
 import PostCard from "@/components/postCard/postCard"
 import styles from './blog.module.css'
+import { revalidatePath } from 'next/cache';
 // import { getPosts } from "@/lib/data";
 
 
 // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("https://next14-starter-two.vercel.app/api/blog", {next:{revalidate:3600}});
+  const res = await fetch("https://next14-starter-two.vercel.app/api/blog", revalidatePath('/blog', 'page'));
 
   if (!res.ok) {
     throw new Error("Something went wrong at blog pag")
