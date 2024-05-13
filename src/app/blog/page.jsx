@@ -1,6 +1,6 @@
-import React from 'react'
-import PostCard from "@/components/postCard/postCard"
-import styles from './blog.module.css'
+// import React from 'react'
+// import PostCard from "@/components/postCard/postCard"
+// import styles from './blog.module.css'
 // import { getPosts } from "@/lib/data";
 
 
@@ -20,18 +20,18 @@ import styles from './blog.module.css'
 //   // FETCH DATA WITH AN API
 //   const posts = await getData();
 
-  // FETCH DATA WITHOUT AN API
-  // const posts = await getPosts();
+//   FETCH DATA WITHOUT AN API
+//   const posts = await getPosts();
 
-  return (
-    <div className={styles.container}>
-      {posts.map((post) => (
-        <div className={styles.post} key={post.slug}>
-          <PostCard post={post} />
-        </div>
-      ))}
-    </div>
-  );
+//   return (
+//     <div className={styles.container}>
+//       {posts.map((post) => (
+//         <div className={styles.post} key={post.slug}>
+//           <PostCard post={post} />
+//         </div>
+//       ))}
+//     </div>
+//   );
 // };
 
-export default BlogPage
+// export default BlogPage
