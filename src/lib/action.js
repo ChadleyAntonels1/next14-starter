@@ -44,7 +44,7 @@ export const addPost = async (prevState,formData) => {
 
     await newPost.save();
     console.log("saved to db");
-    revalidatePath("api/blog");
+    revalidatePath("/blog");
     revalidatePath("/admin");
   } catch (err) {
     console.log(err);
@@ -60,7 +60,7 @@ export const deletePost = async (formData) => {
 
     await Post.findByIdAndDelete(id);
     console.log("deleted from db");
-    revalidatePath("api/blog");
+    revalidatePath("/blog");
     revalidatePath("/admin");
   } catch (err) {
     console.log(err);
