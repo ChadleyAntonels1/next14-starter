@@ -7,7 +7,7 @@ import { revalidatePath } from 'next/cache';
 
 // FETCH DATA WITH AN API
 const getData = async () => {
-  const res = await fetch("https://next14-starter-two.vercel.app/api/blog",{next: revalidatePath('api/blog')});
+  const res = await fetch("https://next14-starter-two.vercel.app/api/blog", { next: { revalidate: 3 } });
 
   if (!res.ok) {
     throw new Error("Something went wrong at blog pag")
