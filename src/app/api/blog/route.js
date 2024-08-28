@@ -3,8 +3,15 @@ import { connectToDb } from "@/lib/utils";
 import { NextResponse } from "next/server";
 
 export const GET = async (request) => {
+  const path = request.nextUrl.searchParams.get('path')
+
+
   try {
     connectToDb();
+    if (path) {
+      revalidatePath(path)
+      return Response.json({ revalidated: true, now: Date.now() })
+    }
 
     const posts = await Post.find();
     return NextResponse.json(posts);

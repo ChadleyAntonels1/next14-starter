@@ -7,7 +7,7 @@ import { useFormState } from "react-dom";
 const AdminPostForm = ({userId}) => {
   const [state, formAction] = useFormState(addPost, undefined);
   
-  return (
+  return ( 
     <form action={formAction} className={styles.container}>
       <h1>Add New Post</h1>
       <input type="hidden" name="userId" value={userId} />

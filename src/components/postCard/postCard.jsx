@@ -4,7 +4,7 @@ import styles from "./postCard.module.css"
 import Link from "next/link"
 
 const PostCard = ({post}) => {
-  return (
+  return ( 
     <div className={styles.container}>
       <div className={styles.top}>
         {post.img && <div className={styles.imgContainer}>
