@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import styles from "./singlePost.module.css";
 import PostUser from "@/components/postUser/postUser";
@@ -37,9 +38,9 @@ const SinglePostPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      {post.img && (
+      {post.url && (
         <div className={styles.imgContainer}>
-          <Image src={post.img} alt="" fill className={styles.img} />
+          <Image src={post.url} alt="Blog Image" fill className={styles.img} />
         </div>
       )}
       <div className={styles.textContainer}>
@@ -58,6 +59,11 @@ const SinglePostPage = async ({ params }) => {
           </div>
         </div>
         <div className={styles.content}>{post.desc}</div>
+
+          <div className={styles.content}>
+            <Image src={post.url} width={500} height={50} alt=""/>
+          </div>
+
       </div>
     </div>
   );
