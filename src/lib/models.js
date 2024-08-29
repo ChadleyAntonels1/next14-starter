@@ -47,6 +47,9 @@ const postSchema =  new mongoose.Schema({
         type: String,
         required: true,
         unique:true
+    },
+    url:{
+        type: String,
     }
 
 },{timestamps: true}
