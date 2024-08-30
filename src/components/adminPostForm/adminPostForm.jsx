@@ -16,6 +16,8 @@ const AdminPostForm = ({userId}) => {
     const base64 = await convertImageToBase64(file)
     setbaseImage(base64)
   }
+  
+  const Promise = require('promise');
 
   const convertImageToBase64 = (file) => {
     return new Promise((resolve, reject) => {
