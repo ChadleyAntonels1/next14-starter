@@ -13,7 +13,7 @@ const PostCard = ({post}) => {
       </div>
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.date}>{post.createdAt?.toString().slice(5, 10)}</p>
+        <p className={styles.date}>{post.createdAt?.toString().slice(8,10)}-{post.createdAt?.toString().slice(5,7)}-{post.createdAt?.toString().slice(0,4)}</p>
         <Link className={styles.link} href={`/blog/${post.slug}`}>READ MORE</Link>
       </div>
     </div>

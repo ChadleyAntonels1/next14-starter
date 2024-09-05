@@ -5,8 +5,9 @@ import styles from "./adminPostForm.module.css";
 import { useFormState } from "react-dom";
 import { useState } from "react";
 import Image from "next/image";
+import Editor from "../quilEditor/Editor";
 
-const AdminPostForm = ({userId}) => {
+const AdminPostForm = ({userId, content}) => {
   const [state, formAction] = useFormState(addPost, undefined);
 
   const [baseImage, setbaseImage] = useState("")
@@ -36,6 +37,8 @@ const AdminPostForm = ({userId}) => {
     });
   }
 
+  
+
   return ( 
     <div>           
 
@@ -47,11 +50,16 @@ const AdminPostForm = ({userId}) => {
         <input type="text" name="slug" placeholder="slug" />
         <input type="file" onChange={(e)=>{uploadImg(e)}} />
         <input type="hidden" name="url" value={baseImage} />
-        {/* <Image src={baseImage} width={50} height={50} alt=""/> */}
+        <div className=" flex justify-center items-center ">
+        <Image src={baseImage} width={300} height={1} alt=""/>
+        </div>
         <textarea type="text" name="desc" placeholder="desc" rows={10} />
         <button>Add</button>
         {state?.error}
       </form>
+
+      {/* <Editor  className={styles.container}/> */}
+
     </div>
   );
 };

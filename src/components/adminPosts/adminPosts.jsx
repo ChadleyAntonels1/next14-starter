@@ -20,7 +20,7 @@ const AdminPosts = async () => {
               height={50}
             />
             <Link className={styles.link} href={`/blog/${post.slug}`}>
-              <span className={styles.postTitle}>{post.title}</span>
+              <span className={styles.postTitle}>{post.title.toString().slice(0, 10)+'...'}</span>
             </Link>
           </div>
           <form action={deletePost}>
