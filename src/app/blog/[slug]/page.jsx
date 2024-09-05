@@ -21,10 +21,6 @@ export const generateMetadata = async ({ params }) => {
 
   const post = await getPost(slug);
 
-  return {
-    title: post.title,
-    description: post.desc,
-  };
 };
 
 const SinglePostPage = async ({ params }) => {
@@ -54,15 +50,13 @@ const SinglePostPage = async ({ params }) => {
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              {post.createdAt?.toString().slice(5, 16)}
+            {post.createdAt?.toString().slice(8,10)}-{post.createdAt?.toString().slice(5,7)}-{post.createdAt?.toString().slice(0,4)} {post.createdAt?.toString().slice(11 ,16)}
             </span>
           </div>
         </div>
         <div className={styles.content}>{post.desc}</div>
 
-          <div className={styles.content}>
-            <Image src={post.url} width={500} height={50} alt=""/>
-          </div>
+          
 
       </div>
     </div>
