@@ -25,9 +25,12 @@ export const authConfig = {
       }
       return session;
     },
+
+   
     authorized({ auth, request }) {
       const user = auth?.user;
       const isOnAdminPanel = request.nextUrl?.pathname.startsWith("/admin");
+      const isOnProfilePanel = request.nextUrl?.pathname.startsWith("/profile");
       const isOnBlogPage = request.nextUrl?.pathname.startsWith("/blog");
       const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
       const isOnServerActionPage = request.nextUrl?.pathname.startsWith("/serveractiontest");
@@ -42,11 +45,20 @@ export const authConfig = {
         return false;
       }
 
-      // ONLY AUTHENTICATED USERS CAN REACH THE BLOG PAGE
+      // ONLY USER&ADMIN CAN REACH THE USER PROFILE DASHBOARD
 
-      if (isOnBlogPage && !user) {
+      if (isOnProfilePanel && !user?.id) {
         return false;
       }
+      if (isOnServerActionPage && !user?.id) {
+        return false;
+      }
+
+      // ONLY AUTHENTICATED USERS CAN REACH THE BLOG PAGE
+
+      // if (isOnBlogPage && !user) {
+      //   return false;
+      // }
 
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 
