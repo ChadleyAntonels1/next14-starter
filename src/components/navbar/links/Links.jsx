@@ -15,10 +15,10 @@ import { handleLogout } from '@/lib/action';
         //     title : "About",
         //     path : "/about",
         // },
-        {
-            title : "Contact",
-            path : "/contact",
-        },
+        // {
+        //     title : "Contact",
+        //     path : "/contact",
+        // },
         {
             title : "Blog",
             path : "/blog",
@@ -47,13 +47,19 @@ import { handleLogout } from '@/lib/action';
             {links.map((link) => (
               <NavLink item={link} key={link.title} />
             ))}
-            {session?.user ? (
+            {session?.user ? 
+            
+            (
               <>
-                {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+                {session.user?.id && <NavLink item={{ title: "Profile", path: "/profile"}} />}
+                
+             
+                {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin"}} />}
                 <form action={handleLogout}>
                   <button className={styles.logout}>Logout</button>
                 </form>
               </>
+              
             ) : (
               <NavLink item={{ title: "Login", path: "/login" }} />
             )}
