@@ -14,28 +14,3 @@
       throw new Error(error);
     }
   };
-
-//  import { MongoClient } from "mongodb";
-
-//  const uri = process.env.MONGODB_URI
-//  const mongo = process.env.MONGO
-//  const options ={}
-
-//  let mongoClient
-
-//  if(!process.env.MONGO){
-//    throw new Error("please add your Mongo URI to .env.local")
-//  }
-
-//  export async function connectToDb(){
-//    try {
-//      if(mongoClient){
-//        return{mongoClient}
-//      }
-//      mongoClient= await(new MongoClient(uri,mongo,options)).connect()
-//      console.log("Mongo Connected!")
-//      return{mongoClient}
-//    } catch (error) {
-//      console.error(error)
-//    }
-//  }
